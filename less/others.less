@@ -19,12 +19,12 @@
 //  white-space: nowrap;
 //}
 
-.text-overflow(@line:1) when (@line<=1) {
+.text-overflow(@line:0) when (@line<1) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.text-overflow(@line:1) when (@line>1){
+.text-overflow(@line:0) when (@line>=1){
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: @line;
